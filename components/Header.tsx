@@ -1,12 +1,43 @@
+"use client";
+
+import { useState } from "react";
+import {
+  Home,
+  UserCircle2,
+  FolderGit2,
+  MessageSquareMore,
+  Sun,
+  Moon,
+} from "lucide-react";
+import NavLink from "./NavLink";
 import Link from "next/link";
 
 export default function Header() {
+  const [isDark, setIsDark] = useState<boolean>(false);
+
   return (
-    <div className="flex gap-2">
-      <Link href="/">Home</Link>
-      <Link href="/">About</Link>
-      <Link href="/">Projects</Link>
-      <Link href="/contact">Contact</Link>
+    <div className="flex items-center gap-1 border border-zinc-300 shadow max-w-min px-1.5 py-1 mx-auto my-3 rounded-full text-[14px]">
+      <Link
+        className="flex items-center gap-2 p-1.5 rounded-full border border-transparent hover:bg-zinc-100 hover:border-zinc-200 transition-colors"
+        href="/"
+      >
+        <Home size={18} />
+      </Link>
+
+      <span className="border-r border-zinc-300 h-5.5" />
+
+      <NavLink href="/" label="About" icon={UserCircle2} />
+      <NavLink href="/" label="Projects" icon={FolderGit2} />
+      <NavLink href="/" label="Contact" icon={MessageSquareMore} />
+
+      <span className="border-r border-zinc-300 h-5.5" />
+
+      <button
+        className="flex items-center gap-2 p-1.5 rounded-full border border-transparent hover:bg-zinc-100 hover:border-zinc-200 transition-colors cursor-pointer"
+        onClick={() => setIsDark((d) => !d)}
+      >
+        {isDark ? <Moon size={18} /> : <Sun size={18} />}
+      </button>
     </div>
   );
 }
