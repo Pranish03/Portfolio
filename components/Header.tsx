@@ -16,7 +16,7 @@ export default function Header() {
   const [isDark, setIsDark] = useState<boolean>(false);
 
   return (
-    <div className="flex items-center gap-1 border border-zinc-300 shadow max-w-min px-1.5 py-1 mx-auto my-3 rounded-full text-[14px]">
+    <header className="bg-white flex items-center gap-1 border border-zinc-300 shadow max-w-min px-1.5 py-1 mx-auto my-3 rounded-full text-[14px] text-zinc-800">
       <Link
         className="flex items-center gap-2 p-1.5 rounded-full border border-transparent hover:bg-zinc-100 hover:border-zinc-200 transition-colors"
         href="/"
@@ -38,6 +38,6 @@ export default function Header() {
       >
         {isDark ? <Moon size={18} /> : <Sun size={18} />}
       </button>
-    </div>
+    </header>
   );
 }

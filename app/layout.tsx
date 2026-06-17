@@ -31,7 +31,8 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body className="min-h-full bg-white bg-sk">
+        <div className="absolute -z-50 bottom-0 left-0 right-0 -top-10 bg-[radial-gradient(circle_500px_at_50%_200px,#b8e6fe,transparent)]" />
         <Header />
         {children}
         <Footer />
