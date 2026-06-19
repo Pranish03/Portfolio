@@ -3,3 +3,12 @@
 body {
   font-family: var(--font-poppins), sans-serif;
 }
+
+.react-activity-calendar__scroll-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.react-activity-calendar__scroll-container::-webkit-scrollbar {
+  display: none;
+}
