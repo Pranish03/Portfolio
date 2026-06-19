@@ -5,7 +5,7 @@ import { GitHubCalendar } from "react-github-calendar";
 export default function Heatmap() {
   return (
     <GitHubCalendar
-      username="Pranish03"
+      username={`${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`}
       blockSize={14}
       blockMargin={4}
       fontSize={14}
@@ -15,9 +15,9 @@ export default function Heatmap() {
       showTotalCount={false}
       theme={{
         light: ["#d4d4d4", "#dbeafe", "#93c5fd", "#60a5fa", "#2563eb"],
-        dark: ["#d4d4d4", "#236b44", "#1b9552", "#40d06e", "#70e89a"],
+        dark: ["#d4d4d4", "#008236", "#00a63e", "#00c950", "#05df72"],
       }}
-      className="text-neutral-600 scroll-smooth"
+      className="text-neutral-600 scroll-smooth bg-gree"
     />
   );
 }
